@@ -1,0 +1,8 @@
+.foucs-b button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.media_rapper{
+  z-index:-1;
+}

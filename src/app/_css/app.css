@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    direction: rtl;
+}
+
+.foucs-b button:focus {
+    outline: none;
+    box-shadow: 0 !important;
+
+
+}

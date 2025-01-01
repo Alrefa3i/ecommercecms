@@ -1,0 +1,14 @@
+@import '../../_css/queries.scss';
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 100px;
+
+    // mid screen
+    @include mid-break {
+        gap: 50px;
+    }
+}
