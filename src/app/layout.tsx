@@ -24,7 +24,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         <InitTheme />
         <link rel="icon" href="/icon.ico" sizes="32x32" />
-       <meta name="google-site-verification" content="sOCMVcfuS72xkz7w8J-Jt6wVY-FHT96dn28zJ0PIH_o" />
+        <meta
+          name="google-site-verification"
+          content="sOCMVcfuS72xkz7w8J-Jt6wVY-FHT96dn28zJ0PIH_o"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

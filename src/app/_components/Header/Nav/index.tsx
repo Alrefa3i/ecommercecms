@@ -5,8 +5,10 @@ import { ShoppingBag } from '@mui/icons-material'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import LoginIcon from '@mui/icons-material/Login'
 import MenuIcon from '@mui/icons-material/Menu'
+import Image from 'next/image'
 import Link from 'next/link'
 
+import logo from '../../../../../public/logo.webp'
 import { Header as HeaderType, User } from '../../../../payload/payload-types'
 import { useAuth } from '../../../_providers/Auth'
 import { CMSLink } from '../../Link'
@@ -16,7 +18,6 @@ import './nav.css'
 
 export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
   const navItems = header?.navItems || []
-  const logo = header?.logo
   const { user } = useAuth()
 
   return (
@@ -24,7 +25,7 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
       <div className="navbar w-full">
         <div className="navbar-start">
           <Link href="/" className="navbar-item">
-            <Media resource={logo} className="w-1/2 lg:w-1/3 mx-auto" />
+            <Image src={logo} alt="logi" className="w-1/2 lg:w-1/3 mx-auto" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

@@ -1,22 +1,20 @@
 'use client'
 
-import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import XIcon from '@mui/icons-material/X'
+import Image from 'next/image'
 import Link from 'next/link'
 
-import { Media } from '../Media'
+import logo from '../../../../public/logo.webp'
 
-import classes from './index.module.scss'
-const FooterComponent = ({ footer }) => {
-  const navItems = footer?.navItems || []
+const FooterComponent = () => {
   return (
     <>
       <footer className="bg-white m-4">
         <div className="bg-white py-8 0 flex justify-around items-center mx-auto flex-col lg:flex-row gap-4">
           <div className="w-full lg:w-1/4 flex ">
-            <Media resource={footer?.logo} alt="logo" className="mx-auto" />
+            <Image src={logo} alt="logo" className="mx-auto" />
           </div>
           <div className="w-1/6 hidden lg:block">
             <p>مكتبة الكترونية تهدف لتوفير الكتب العلمية والأدبية والدينية بأسعار مناسبة للجميع</p>
@@ -50,13 +48,22 @@ const FooterComponent = ({ footer }) => {
             <div>
               <h3 className="text-logo-500 font-semibold mb-4">تابعونا على</h3>
               <div className="flex justify-center md:justify-start gap-4">
-                <a href="https://www.facebook.com/bait.alelm" className="text-gray-500 hover:text-gray-800">
+                <a
+                  href="https://www.facebook.com/bait.alelm"
+                  className="text-gray-500 hover:text-gray-800"
+                >
                   <FacebookIcon />
                 </a>
-                <a href="https://www.instagram.com/bait.alelm" className="text-gray-500 hover:text-gray-800">
+                <a
+                  href="https://www.instagram.com/bait.alelm"
+                  className="text-gray-500 hover:text-gray-800"
+                >
                   <XIcon />
                 </a>
-                <a href="https://www.instagram.com/bait.alelm" className="text-gray-500 hover:text-gray-800">
+                <a
+                  href="https://www.instagram.com/bait.alelm"
+                  className="text-gray-500 hover:text-gray-800"
+                >
                   <InstagramIcon />
                 </a>
               </div>
@@ -68,7 +75,7 @@ const FooterComponent = ({ footer }) => {
           <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2024{' '}
             <a href="https://alrefa3ee.com/" className="hover:underline">
-             Baitalelm
+              Baitalelm
             </a>
             . All Rights Reserved.
           </span>

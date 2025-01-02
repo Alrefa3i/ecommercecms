@@ -13,10 +13,9 @@ export async function Footer() {
   } catch (error) {
     console.error('Error fetching footer:', error)
   }
-
   return (
     <>
-      <FooterComponent footer={footer} />
+      <FooterComponent />
     </>
   )
 }

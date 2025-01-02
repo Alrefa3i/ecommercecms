@@ -1,14 +1,10 @@
 'use client'
-
-import React, { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
-
 import { Media } from '../../../_components/Media'
 import RichText from '../../../_components/RichText'
 
 import './index.css'
 
-const Hero = ({ richText, media, links }) => {
+const Hero = ({ richText }) => {
   return (
     <section className="min-w-full relative ">
       <div className="text-white absolute top-8 lg:top-36 left-1/2 translate-y-1/2 -translate-x-1/2 w-full flex flex-col items-center justify-center gap-10">
@@ -28,7 +24,7 @@ const Hero = ({ richText, media, links }) => {
           </div>
         </div>
       </div>
-      <Media resource={media} className="w-full object-cover relative media_rapper" />
+      <Media resource={'/video.webm'} className="w-full object-cover relative media_rapper" />
     </section>
   )
 }

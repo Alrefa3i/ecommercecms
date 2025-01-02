@@ -22,9 +22,7 @@ export const Video: React.FC<MediaProps> = props => {
     }
   }, [])
 
-  if (resource && typeof resource !== 'string') {
-    const { filename } = resource
-
+  if (resource) {
     return (
       <video
         playsInline
@@ -36,7 +34,7 @@ export const Video: React.FC<MediaProps> = props => {
         onClick={onClick}
         ref={videoRef}
       >
-        <source src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${filename}`} />
+        <source src={`${resource}`} />
       </video>
     )
   }
